@@ -5,9 +5,9 @@ typedef struct
     uint8_t destination[6];
     uint8_t source[6];
     uint16_t type;
-} jroc_ethernet_header_t;
+} jroc_eth_header_t;
 
-int jroc_ethernet_frame_size(void)
+int jroc_eth_header_size(void)
 {
-    return sizeof(jroc_ethernet_header_t);
+    return sizeof(jroc_eth_header_t);
 }

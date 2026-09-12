@@ -1,0 +1,82 @@
+J-Roc XCore 1.0
+----------------
+
+Core:
+- kernel
+- memory
+- paging
+- interrupts
+- timer
+- process foundation
+- scheduler foundation
+
+Storage:
+- block layer
+- disk model
+- partition model
+- filesystem foundation
+- VFS
+- cache
+- journal
+- recovery
+
+Networking:
+- device
+- Ethernet model
+- ARP
+- IPv4 model
+- routing
+- sockets
+- UDP
+- TCP foundation
+- DNS interface
+
+Security:
+- identity
+- authentication interface
+- permissions
+- policy
+- sandbox model
+- audit
+- crypto interface
+
+Services:
+- service manager
+- logging
+- update interface
+- service IPC
+
+Userspace:
+- init
+- runtime
+- shell
+- userspace library
+- utilities
+
+Desktop:
+- display abstraction
+- window manager
+- settings
+- file manager
+- notifications
+- themes
+- input
+
+Frontend:
+- UI engine
+- widgets
+- navigation
+- state
+
+Apps:
+- terminal
+- files
+- settings
+- system
+- about
+- store
+
+Release:
+- integration coordinator
+- validation
+- release manifest

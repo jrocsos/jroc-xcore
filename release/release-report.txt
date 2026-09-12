@@ -1,0 +1,97 @@
+J-Roc XCore Release Report
+==========================
+
+JROC_NAME=J-Roc XCore
+JROC_VERSION=1.0
+JROC_CHANNEL=stable
+JROC_ARCH=i386
+JROC_TARGET=x86
+JROC_RELEASE_TYPE=integration
+JROC_ECOSYSTEM=J-Roc Ecosystem
+
+Validation:
+  Tree validation: PASSED
+  Integration compile: PASSED
+  Integration runtime test: PASSED
+
+Subsystem directories:
+apps
+apps/about
+apps/core
+apps/developer
+apps/files
+apps/settings
+apps/store
+apps/system
+apps/terminal
+desktop
+desktop/core
+desktop/display
+desktop/file_manager
+desktop/files
+desktop/gui
+desktop/input
+desktop/notifications
+desktop/settings
+desktop/shell
+desktop/theme
+desktop/themes
+desktop/window
+desktop/window_manager
+frontend
+frontend/api_client
+frontend/control_center
+frontend/core
+frontend/navigation
+frontend/state
+frontend/ui
+frontend/web
+frontend/widgets
+integration
+integration/api
+integration/config
+integration/init
+integration/registry
+integration/status
+kernel
+memory
+network
+network/arp
+network/buffer
+network/device
+network/dns
+network/ethernet
+network/ip
+network/route
+network/socket
+network/tcp
+network/udp
+sdk
+sdk/headers
+sdk/include
+sdk/lib
+sdk/libs
+sdk/templates
+sdk/tools
+security
+security/audit
+security/auth
+security/crypto
+security/identity
+security/permissions
+security/policy
+security/sandbox
+services
+services/ipc
+services/logging
+services/manager
+services/update
+userspace
+userspace/init
+userspace/lib
+userspace/runtime
+userspace/shell
+userspace/utils
+
+Generated:
+Sat Sep 12 21:41:19 UTC 2026

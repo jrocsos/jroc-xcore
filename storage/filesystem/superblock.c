@@ -1,15 +1,16 @@
 #include <stdint.h>
 
+#define JROC_FS_MAGIC 0x4A524F43u
+
 typedef struct
 {
     uint32_t magic;
+    uint32_t version;
     uint32_t block_size;
     uint32_t total_blocks;
     uint32_t free_blocks;
     uint32_t root_inode;
 } jroc_superblock_t;
-
-#define JROC_FS_MAGIC 0x4A524F43u
 
 static jroc_superblock_t superblock;
 static int ready = 0;
@@ -18,6 +19,7 @@ void jroc_superblock_init(
     uint32_t total_blocks)
 {
     superblock.magic = JROC_FS_MAGIC;
+    superblock.version = 1;
     superblock.block_size = 512;
     superblock.total_blocks = total_blocks;
     superblock.free_blocks = total_blocks;
@@ -32,7 +34,12 @@ int jroc_superblock_valid(void)
            superblock.magic == JROC_FS_MAGIC;
 }
 
-uint32_t jroc_superblock_blocks(void)
+uint32_t jroc_superblock_total_blocks(void)
 {
     return superblock.total_blocks;
+}
+
+uint32_t jroc_superblock_free_blocks(void)
+{
+    return superblock.free_blocks;
 }

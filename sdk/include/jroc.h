@@ -1,9 +1,8 @@
 #ifndef JROC_H
 #define JROC_H
 
-#define JROC_API_MAJOR 1
-#define JROC_API_MINOR 0
+typedef unsigned int jroc_uint;
 
-int jroc_platform_status(void);
+int jroc_runtime_version(void);
 
 #endif

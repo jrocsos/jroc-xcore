@@ -1,4 +1,11 @@
-int jroc_userspace_shell_status(void)
+static int ready = 0;
+
+void jroc_shell_init(void)
 {
-    return 1;
+    ready = 1;
+}
+
+int jroc_shell_status(void)
+{
+    return ready;
 }
