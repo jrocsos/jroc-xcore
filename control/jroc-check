@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -e
+
+cd /workspaces/jroc-xcore
+
+echo "=========================================="
+echo "       J-ROC PLATFORM HEALTH CHECK"
+echo "=========================================="
+
+echo
+echo "[1] Repository:"
+test -f VERSION && cat VERSION
+
+echo
+echo "[2] Boot files:"
+test -f boot/entry.asm
+test -f config/linker.ld
+test -f config/grub/grub.cfg
+echo "OK"
+
+echo
+echo "[3] Kernel:"
+test -f kernel/kernel.c
+echo "OK"
+
+echo
+echo "[4] Ecosystem:"
+for d in \
+    xcore storage network security services userspace \
+    desktop apps sdk packages frontend backend ai cloud \
+    developer installer recovery diagnostics release
+do
+    test -d "$d"
+done
+echo "OK"
+
+echo
+echo "[5] C source inventory:"
+find . -type f -name '*.c' | sort | wc -l
+
+echo
+echo "[6] ISO:"
+if [ -f build/jroc.iso ]; then
+    ls -lh build/jroc.iso
+else
+    echo "ISO not present yet."
+fi
+
+echo
+echo "=========================================="
+echo "      J-ROC PLATFORM CHECK COMPLETE"
+echo "=========================================="

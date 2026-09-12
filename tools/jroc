@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -e
+
+case "${1:-help}" in
+  build)
+    make -C /workspaces/jroc-xcore iso
+    ;;
+  run)
+    make -C /workspaces/jroc-xcore run
+    ;;
+  clean)
+    make -C /workspaces/jroc-xcore clean
+    ;;
+  *)
+    echo "J-Roc XCore"
+    echo
+    echo "  jroc build"
+    echo "  jroc run"
+    echo "  jroc clean"
+    ;;
+esac
