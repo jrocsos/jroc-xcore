@@ -1,16 +1,54 @@
-from evolution.version_manager import JROCVersionManager
+from brain.kernel import JROCKernel
 
 
-jroc_evolution = JROCVersionManager()
+jroc = JROCKernel()
+
 
 
 print(
-    jroc_evolution.status()
+"BOOTING JROC AI"
 )
+
+
+
+print(
+jroc.boot()
+)
+
+
+
+print(
+"\nSYSTEM STATUS"
+)
+
+
+
+print(
+jroc.status_report()
+)
+
+
+
+print(
+"\nUPGRADING SYSTEM"
+)
+
 
 
 for i in range(5):
 
     print(
-        jroc_evolution.upgrade()
+        jroc.upgrade()
     )
+
+
+
+print(
+"\nFINAL STATUS"
+)
+
+
+
+print(
+jroc.status_report()
+)
